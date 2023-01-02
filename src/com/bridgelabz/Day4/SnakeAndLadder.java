@@ -1,6 +1,6 @@
-package com.bridgelabz.Day4.SnakeAndLadder;
+package com.bridgelabz.Day4;
 
-public class UC7 {
+public class SnakeAndLadder {
     public static final int ladder=2,snake=1;
 
     public static int play(int player){

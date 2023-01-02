@@ -1,6 +1,7 @@
-package com.bridgelabz.Day3.LineComparison;
+package com.bridgelabz.Day8;
 
-public class UC3 {
+public class LineComparison {
+
     public static void compareTo(double length1,double length2){
         Integer n1 = new Integer((int)length1);
         Integer n2 = new Integer((int)length2);

@@ -1,9 +1,23 @@
-package com.bridgelabz.Day9.Employee;
+package com.bridgelabz.Day8;
 
 import java.util.Random;
 
-public class UC6 {
+public class EmployeeWage {
+
     public static final int is_PartTime=1,is_FullTime=2;
+
+
+    public static int randomNum(int rdcheck){
+        switch (rdcheck) {
+            case is_PartTime:
+                return 4;
+            case is_FullTime:
+                return 8;
+            default:
+                return 0;
+        }
+    }
+
     public static void main(String[] args){
 
         Random ran = new Random();
@@ -18,16 +32,7 @@ public class UC6 {
 
         while (total_EmpHr < max_Hrs_Month && totalWorkDays < numWork ){
 
-            switch (randomCheck) {
-                case is_PartTime:
-                    empHrs = 4;
-                    break;
-                case is_FullTime:
-                    empHrs = 8;
-                    break;
-                default:
-                    empHrs = 0;
-            }
+            empHrs = randomNum(randomCheck);
             total_EmpHr=total_EmpHr + empHrs;
 
         }

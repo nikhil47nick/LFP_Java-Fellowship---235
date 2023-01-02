@@ -1,19 +1,23 @@
-package com.bridgelabz.Day9.Employee;
+package com.bridgelabz.Day3;
 
 import java.util.Random;
 
-public class UC5 {
+public class EmployeeWage {
     public static final int is_PartTime=1,is_FullTime=2;
     public static void main(String[] args){
 
         Random ran = new Random();
         int randomCheck = ran.nextInt(3);
-        int empRatePerHr=20;
         int empHrs;
-        int salary;
         int totSal=0;
-        int numWork=22;
-        for (int i=1;i<=numWork;i++ ) {
+        int numWork=20;
+        int max_Hrs_Month=100;
+        int totalWorkDays=0;
+        int total_EmpHr=0;
+        int empRatePerHrs=20;
+
+        while (total_EmpHr < max_Hrs_Month && totalWorkDays < numWork ){
+
             switch (randomCheck) {
                 case is_PartTime:
                     empHrs = 4;
@@ -24,10 +28,10 @@ public class UC5 {
                 default:
                     empHrs = 0;
             }
-            salary = empHrs * empRatePerHr;
-            totSal=totSal + salary;
+            total_EmpHr=total_EmpHr + empHrs;
+
         }
+        totSal=total_EmpHr * empRatePerHrs;
         System.out.println("Employee salary"+ totSal);
     }
-
 }

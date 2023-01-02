@@ -2,11 +2,11 @@ package com.bridgelabz.Day9.Employee;
 
 import java.util.Random;
 
-public class UC8 {
+public class EmployeeWage {
 
     public static final int is_PartTime=1,is_FullTime=2;
 
-    public static void calEmpWage(String company,int empRateHrs,int numWork, int  maxHrsMonth){
+    public  void calEmpWage(String company,int empRateHrs,int numWork, int  maxHrsMonth){
         int total_EmpHr=0,empHrs=0,totalWorkDay=0;
 
         while (total_EmpHr < maxHrsMonth && totalWorkDay < numWork ){
@@ -20,7 +20,7 @@ public class UC8 {
 
     }
 
-    public static int empPresentTime(){
+    public  int empPresentTime(){
        int rd = randomCheck();
         switch (rd) {
             case is_PartTime:
@@ -32,14 +32,11 @@ public class UC8 {
         }
     }
 
-    public static int randomCheck(){
+    public  int randomCheck(){
         Random ran = new Random();
         return ran.nextInt(3);
     }
 
-    public static void main(String[] args) {
-        calEmpWage("D-mart",20,21,150);
-        calEmpWage("Reliance",20,10,100);
-    }
+
 
 }
